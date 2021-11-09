@@ -3,84 +3,77 @@
     <div class="rec1"></div>
     <div class="rec2"></div>
     <div class="box">
-      <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <a class="navbar-brand logo" href="#" v-if="tab == 0">geon-woong</a>
-        <a class="navbar-brand tab-tit" href="#" v-if="tab == 1">Publishing</a>
-        <a class="navbar-brand tab-tit" href="#" v-if="tab == 2">Design</a>
-        <a class="navbar-brand tab-tit" href="#" v-if="tab == 3">Life</a>
-        <a class="navbar-brand tab-tit" href="#" v-if="tab == 4">Git-hub</a>
-        <a class="navbar-brand tab-tit" href="#" v-if="tab == 5">Contact</a>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto nav-txt">
-            <li class="nav-item active">
-              <a class="nav-link" @click="tab = 0" href="#"
-                >PROFILE <span class="sr-only">(current)</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" @click="tab = 1" href="#">PUBLISHING</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" @click="tab = 2" href="#">DESIGN</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" @click="tab = 3" href="#">LIFE</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" @click="tab = 4" href="#">GIT-HUB</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" @click="tab = 5" href="#">CONTACT</a>
+      <div class="nav-space"></div>
+      <nav class="nav-bar bg-white">
+        <a class="logo" style="text-decoration: none" href="/profile">
+          geon-woong
+        </a>
+        <i class="mini-nav fa-2x fas fa-bars m-2"></i>
+        <div class="nav-wrap">
+          <ul class="d-flex justify-content-end">
+            <li
+              v-for="(menulist, i) in menuList"
+              :key="i"
+              class="nav-item active flex-row"
+            >
+              <a class="nav-link" @click="tab = i" href="#">
+                {{ menuList[i] }}
+              </a>
             </li>
           </ul>
         </div>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
       </nav>
       <transition name="fade">
         <Profile v-if="tab == 0" />
       </transition>
       <transition name="fade">
-        <Publishing v-if="tab == 1" />
+        <Work v-if="tab == 1" />
       </transition>
       <transition name="fade">
-        <Design v-if="tab == 2" />
+        <Skill v-if="tab == 2" />
       </transition>
       <transition name="fade">
-        <Life v-if="tab == 3" />
+        <Design v-if="tab == 3" />
+      </transition>
+      <transition name="fade">
+        <Life v-if="tab == 4" />
+      </transition>
+      <transition name="fade">
+        <Contact v-if="tab == 5" />
       </transition>
     </div>
   </div>
+  <!-- <DesingPage v-if="DesignPage == 1" /> -->
+  <router-view></router-view>
 </template>
 
 <script>
-import Profile from "./components/profile.vue";
-import Publishing from "./components/Publishing.vue";
+import Profile from "./components/Profile.vue";
+import Work from "./components/Work.vue";
+import Skill from "./components/Skill.vue";
 import Design from "./components/Design.vue";
 import Life from "./components/Life.vue";
+import Contact from "./components/Contact.vue";
+// import DesingPage from "./components/Design1.vue";
 
 export default {
   name: "App",
   data() {
     return {
       tab: 0,
+      design_page: 0,
+      menuList: ["PROFILE", "WORK", "SKILL", "DESIGN", "LIFE", "CONTACT"],
     };
   },
   components: {
     Profile,
-    Publishing,
+    Work,
+    Skill,
     Design,
     Life,
+    Contact,
   },
+  methods: {},
 };
 </script>
 
@@ -91,6 +84,15 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
 }
 .wrap {
   position: relative;
@@ -124,7 +126,7 @@ export default {
 }
 .box {
   position: relative;
-  width: 88%;
+  width: 88vw;
   height: 90vh;
   background-color: #fff;
   margin: 0 auto;
@@ -138,8 +140,18 @@ export default {
   font-size: 30px;
   font-weight: lighter;
 }
-
-.navbar {
+.nav-space {
+  display: block;
+  height: 50px;
+  width: 100%;
+}
+.nav-bar {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 0%;
+  left: 0;
   border-radius: 40px !important;
   padding: 20px 50px;
 }
@@ -150,11 +162,14 @@ export default {
   border-radius: 20px;
   font-size: 30px;
   line-height: 1.5;
-  padding: 0 20px 5px 20px;
+  padding: 0 20px 0px 20px;
 }
 .nav-txt {
   font-weight: lighter;
   font-size: 15px;
+}
+.nav-link {
+  color: #000;
 }
 .fade-enter-from {
   opacity: 0;
@@ -164,5 +179,22 @@ export default {
 }
 .fade-enter-to {
   opacity: 1;
+}
+.nav-link:focus {
+  color: #05294a;
+}
+.mini-nav {
+  display: none;
+}
+@media screen and (max-width: 992px) {
+  .nav-wrap {
+    display: none;
+  }
+  .nav-bar {
+    padding: 20px 60px 0 60px;
+  }
+  .mini-nav {
+    display: block;
+  }
 }
 </style>
