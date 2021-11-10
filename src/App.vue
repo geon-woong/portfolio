@@ -85,9 +85,11 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
+dl,
 ul,
 li {
   list-style: none;
+  margin-bottom: 0;
 }
 
 a {
@@ -152,7 +154,7 @@ a {
   justify-content: space-between;
   top: 0%;
   left: 0;
-  border-radius: 40px !important;
+  border-radius: 40px 40px 0 0 !important;
   padding: 20px 50px;
 }
 .logo {
@@ -161,7 +163,7 @@ a {
   color: #fff !important;
   border-radius: 20px;
   font-size: 30px;
-  line-height: 1.5;
+  line-height: 1;
   padding: 0 20px 0px 20px;
 }
 .nav-txt {
@@ -186,7 +188,8 @@ a {
 .mini-nav {
   display: none;
 }
-@media screen and (max-width: 992px) {
+
+@media screen and (max-width: 1200px) {
   .nav-wrap {
     display: none;
   }
@@ -196,5 +199,7 @@ a {
   .mini-nav {
     display: block;
   }
+}
+@media screen and (max-width: 768px) {
 }
 </style>

@@ -42,6 +42,7 @@ export default {};
 <style>
 .profile {
   padding: 50px 0 50px 60px;
+  height: 100%;
 }
 .txt-box {
   font-family: "Nanum Gothic", "Rowdies";
