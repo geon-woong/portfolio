@@ -1,6 +1,22 @@
 <template>
   <section class="sec-wrap">
-    <h3>라이프이스소굿워우워</h3>
+    <div class="row">
+      <div class="col-md-4" style="position: relative; overflow: hidden">
+        <div class="life-main">
+          <img
+            style="width: 100%; height: 100%"
+            src="../assets/life_main.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div style="width: 100%; height: 50%" class="txt-box">
+          웅스타그램으로 가기
+        </div>
+        <div style="width: 100%; height: 50%" class="txt-box"></div>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -11,34 +27,18 @@ export default {
       data: [],
     };
   },
+  components: {},
 };
 </script>
 
 <style>
-.life {
-  padding: 30px 50px;
-  display: flex;
-  height: 100%;
+.life-main {
+  overflow: hidden;
+  position: relative;
+  transition: all 1s;
+  border-radius: 10px;
 }
-.life-box {
-  background: #fafafa;
-}
-.example-slide {
-  align-items: center;
-  background-color: #666;
-  color: #999;
-  display: flex;
-  font-size: 1.5rem;
-  justify-content: center;
-  min-height: 10rem;
-}
-.wstagram {
-  border-radius: 20px;
-  width: 390px;
-  height: 500px;
-  background-image: url("../assets/wstagram.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  cursor: pointer;
+.life-main:hover {
+  transform: scale(0.95);
 }
 </style>
