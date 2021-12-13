@@ -61,13 +61,13 @@
 </template>
 
 <script>
-
 export default {
   name: "App",
   mounted() {
   },
   data() {
     return {
+      modal:true,
       year : new Date().getFullYear(),
       design_page: 0,
       menuList: ["Home", "About","Work", "Contact"],
@@ -96,7 +96,6 @@ export default {
     };
   },
   components: {
-    
   },
    
   methods: {
@@ -170,7 +169,7 @@ a {
 }
 
 .sec-wrap {
-  padding: 17vh 10vw 5vh 10vw;
+  padding: 20vh 10vw 5vh 10vw;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -319,6 +318,16 @@ a {
   body {
     font-size: 0.8rem;
   }
+  .rec1{
+    display: none;
+  }
+  .rec2 {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    top: 0%;left: 0;
+    border-radius: 0;
+  }
   .tab-title {
     position: relative;
     display: block;
@@ -343,12 +352,7 @@ a {
   .nav-bar {
     padding: 20px 30px;
   }
-  .rec2 {
-    width: 100%;
-    height: 100%;
-    margin: 0%;
-    border-radius: 0;
-  }
+  
   .nav-txt {
     font-size: 12px;
   }

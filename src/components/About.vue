@@ -189,11 +189,12 @@ export default {
 @media screen and (max-width: 768px) {
 
 .ch-box {
-  padding: 20px;
-  height: 120px;
-  min-height: 120px;
+  padding: 10px;
+  height: 150px;
+  min-height: 150px;
 }
 .icon-wrap{
+  margin-top: 5px;
   margin-bottom: 5px;
 }
 

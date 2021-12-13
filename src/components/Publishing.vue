@@ -20,7 +20,7 @@
                 <a target="blank" :href="pub_link[i]">
                 <i class="fas fa-link"></i>
                 </a>
-                <a :href="git_link" target="blank">
+                <a :href="git_link[i]" target="blank">
                 <i class="fab fa-github-alt"></i>
                 </a>
               </p>

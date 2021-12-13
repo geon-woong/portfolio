@@ -1,5 +1,4 @@
 import { createStore } from 'vuex'
-import axios from 'axios'
 
 
 
@@ -38,10 +37,11 @@ const store = createStore({
             ],
 
             pub_tit: ["포트폴리오", "라이브네이션", "도미노피자", "풀무원녹즙", "라이프캔버스", "시디즈", "인하대학교", "넥서스", "STX 건설", "소니코리아"],
-            pub_link: ["https://geon-woong.github.io/", "https://geon-woong.github.io/live_nation", "https://geon-woong.github.io/dominos/", "https://geon-woong.github.io/pullmuone/", "https://geon-woong.github.io/hanhwalife/", "https://geon-woong.github.io/sidiz/",
+            pub_link: ["", "https://geon-woong.github.io/live_nation", "https://geon-woong.github.io/dominos/", "https://geon-woong.github.io/pullmuone/", "https://geon-woong.github.io/hanhwalife/", "https://geon-woong.github.io/sidiz/",
                 "https://geon-woong.github.io/inha/", "https://geon-woong.github.io/nexus/", "https://geon-woong.github.io/stxconst/", "https://geon-woong.github.io/sony/"],
             origin_link: ["", "", "https://web.dominos.co.kr/main", "https://greenjuice.pulmuone.com", "https://lifecanvas.hanwhalife.com/p/main/SF_PCMA000_P10000.do", "https://www.sidiz.com/", "https://www.inha.ac.kr/kr/index.do", "https://nexus-official.com", "http://www.stxconst.co.kr", "https://www.sony.co.kr"],
-            git_link: "https://github.com/geon-woong",
+            git_link: ["https://github.com/geon-woong/portfolio", "https://github.com/geon-woong/live_nation", "https://github.com/geon-woong/dominos", "https://github.com/geon-woong/pullmuone", "https://github.com/geon-woong/hanhwalife", "https://github.com/geon-woong/sidiz",
+                "https://github.com/geon-woong/inha", "https://github.com/geon-woong/nexus", "https://github.com/geon-woong/stxconst", "https://github.com/geon-woong/sony"],
 
             desg_img: [require("/src/assets/livenation_logo.png"), require("/src/assets/livenation_logo.png"),],
             desg_tit: ["라이브네이션", "포트폴리오 페이지"],
@@ -63,19 +63,7 @@ const store = createStore({
 
 
     },
-    //액션에서 호출하고 mutation에서 사용?
-    actions: {
-        // context는 제거 될 확률이 높다. context 는 store 자체를 말한다.
-        자료호출(context) {
-            axios.get('https://tarolong.github.io/more0.json')
-                .then((res) => {
-                    //mutation에 접근할 때 는 커밋으로 접근한다.
-                    context.commit("dataUpdate", res.data);
-                })
-                .catch()
 
-        }
-    }
 })
 
 export default store
