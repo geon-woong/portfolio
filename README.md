@@ -1,24 +1,5 @@
-# portfolio
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+디자인부터 구현 배포까지 100% 개인작업으로 완성했습니다.
+해당 포트폴리오 사이트는 Vue.js로 구축하여 파이어베이스에 배포하였습니다.
+강의로 배운 내용을 연습하기 위해 , 라우터로 페이지를 구현하여 상단메뉴와 하단 페이지 전환버튼으로 페이지 이동할 수 있게 만들었습니다.
+Vuex 연습을 위해, 데이터와 상태를 스토어에서 관리해 vuex에 대한 이해를 높였습니다.
+부트스트랩을 이용해 쉽게 반응형을 구현했으며 화면 크기 1980 / 1440 / 768 에 맞췄습니다.
