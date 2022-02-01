@@ -1,28 +1,22 @@
 import { createWebHistory, createRouter } from "vue-router";
-import Profile from "./components/Profile.vue";
 import About from "./components/About.vue";
-import Work from "./components/Work.vue";
-import Contact from "./components/Contact.vue";
+import Publishing from "./components/Publishing"
+import Work from "./components/Work.vue"
 const routes = [
     {
-        path: "/profile",
-        component: Profile,
-        // path: "/경로",
-        // component: import해온 컴포넌트,
-    },
-    {
-        path: "/About",
+        path: "/",
         component: About,
     },
     {
-        path: "/Work",
+        path: "/work",
         component: Work,
     },
-
     {
-        path: "/contact",
-        component: Contact,
+        path: "/publishing",
+        component: Publishing,
     },
+
+
 ];
 
 const router = createRouter({
