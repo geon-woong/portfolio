@@ -322,7 +322,7 @@ border-radius: 10px;
 
 /* work page  */
 .swiper-container {
-  padding-top: 5px !important;
+  /* padding-top: 5px !important; */
 }
 .sw-box {
   text-align: center;

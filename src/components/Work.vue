@@ -1,8 +1,8 @@
 <template>
   <div class="sec-wrap">
-      <h5 class="tab-title" style="text-align:left">Project</h5>
+      <h5 class="tab-title mb-3" >Project</h5>
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-md-4">
            <swiper class="d-flex"
             v-bind="swiperOptions"
             @swiper="onSwiper" @slideChange="getSlideIndex"
@@ -17,19 +17,19 @@
                 </swiper-slide>
           </swiper>
         </div>
-        <div class="col-sm-8">
+        <div class="col-md-8">
           <div>
             <h6>
               {{work_page2[selected].title}}
             </h6>
             <ul>
               <li>{{work_page2[selected].description[0]}}</li>
-              <li>사용기술 :{{work_page2[selected].description[1]}}</li>
-              <li>배포 :{{work_page2[selected].description[2]}}</li>
+              <li>기술스택 {{work_page2[selected].description[1]}}</li>
+              <li>배포 {{work_page2[selected].description[2]}}</li>
             </ul>
             <p>
-              <a :href="work_page2[selected].git_link" target="blank">
-                  소스코드 보기 <i class="fab fa-4x fa-github-alt"></i>  
+              <a :href="work_page2[selected].git_link" target="blank" class="link-style">
+                  Git hub Link <i class="fab fa-github-alt"></i>  
                 </a>  
             </p>
           </div>
@@ -85,6 +85,29 @@ setup() {
 </script>
 
 <style scoped>
+html{
+  font-family: 'Nanum Gothic';
+}
+h6{
+  font-size: 1.2rem;
+}
+li{
+  line-height: 2rem;
+}
+i{
+  line-height: 2.2;
+  font-size: 1.5rem;
+  transition: all 1s;
+}
+.link-style{
+  transition: all 1s;
+  text-decoration: underline;
+}
+.link-style:hover i{
+  color: var(--sub-color);
+  transform: scale(1.4);
+}
+
 
 .swiper-slide div {
   height: 28rem;
@@ -95,13 +118,34 @@ setup() {
 }
 .swiper-slide div img{
 width: 100%;
-  /* object-fit: cover; */
 }
-.col-sm-8 div{
-  padding: 3rem 5rem;background: ;
+.col-md-8 div{
+  /* background: #fafafa; */
+  border: 3px solid #fafafa;
+  width: 100%; height: 28rem;
+  padding: 7rem 5rem 5rem 9rem;
+  /* position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%); */
+    border-radius: 20px;
+
 }
-.col-sm-8 div h6{
+.col-md-8 div h6{
   font-weight: bold;
   font-size: 1.5rem;
+}
+
+
+@media screen and (max-width:768px){
+  .swiper-slide div{
+    height: 20rem;
+  }
+  .col-md-8 div{
+    position: relative;
+    padding: 3rem;
+    width: 100%;
+    height: 100%;
+    margin-top: 1rem;
+  } 
 }
 </style>>

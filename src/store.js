@@ -44,37 +44,35 @@ const store = createStore({
                         title: "동물의숲 사전",
                         link: "https://acnh-book.web.app/",
                         git_link: "https://github.com/geon-woong/ACNH_BOOK",
-                        description : ["Public Api 데이터를 이용해 모여봐요 동물의숲에 등장하는 생물 도감","Vue.js , Bootstrap","Heroku"],
+                        description : ["Public API 데이터를 이용한 모여봐요 동물의숲 생물 도감","Vue.js , Bootstrap","Heroku"],
                     },
                     {
                         img: require("/src/assets/woong_mall.png"),
                         title: "Nuxt 쇼핑몰 사이트",
                         link: "https://woong-mall.herokuapp.com/",
                         git_link: "https://github.com/geon-woong/woong-mall",
-                        description : ["Public Api 데이터를 이용해 서버사이드 랜더링을 학습","Nuxt.js ,Vue.js , Bootstrap","Heroku"],
+                        description : ["Public API 데이터를 이용해 SSR 학습","Nuxt.js ,Vue.js , Bootstrap","Heroku"],
                     },
                     {
                         img: require("/src/assets/livenation.png"),
                         title: "라이브네이션 리디자인",
                         link: "https://geon-woong.github.io/live_nation/",
                         git_link: "https://github.com/geon-woong/live_nation",
-                        description : ["리디자인페이지 Vue.js를 이용해 마크업","Vue.js ,Figma, Bootstrap","Github"],
+                        description : ["리디자인페이지 Vue.js를 이용해 마크업","Vue.js ,Figma, Bootstrap","Github Page"],
 
                     },
                     {
-                        img: require("/src/assets/livenation_logo_.png"),
-                        title: "리액트 게시판",
-                        link: "https://geon-woong.github.io/live_nation/",
-                        git_link: "https://github.com/geon-woong/live_nation",
+                        img: require("/src/assets/livenation.png"),
+                        title: "리액트 게시판 ( 진행중 )",
+                        link: "https://github.com/geon-woong/woong-community",
+                        git_link: "https://github.com/geon-woong/woong-community",
                         description : ["리액트 JS + 파이어베이스 게시판 만들기","React + Firebase","Firebase"],
 
                     },
             ] ,
             work : 
                 [
-                    
-                
-                    {ㅊ
+                    {
                         img:require("/src/assets/dominos.png"),
                         title:"도미노피자",
                         link:"https://geon-woong.github.io/dominos/",
