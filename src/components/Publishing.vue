@@ -50,8 +50,8 @@
   </div>
   </div>
   <div class="direction">
-        <router-link to="/" class="prev-page">Prev</router-link>        
-        <a :href="gitHub" target="blank" class="next-page">Go to Next</a>        
+        <router-link to="/work" class="prev-page">Prev</router-link>        
+        <a :href="gitHub" target="blank" class="next-page">GitHub</a>        
   </div>
         
 </template>
@@ -126,7 +126,8 @@ export default {
 <style scoped>
 
 .swiper-slide-active{
-  border: 3px solid rgb(179, 173, 173);
+  /* border: 3px solid rgb(179, 173, 173); */
+  border: 3px solid var(--sub-color);
 }
 .swiper-pagination-bullet-active{
   background: var(--sub-color) !important;

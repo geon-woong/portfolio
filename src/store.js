@@ -44,7 +44,7 @@ const store = createStore({
                         title: "동물의숲 사전",
                         link: "https://acnh-book.web.app/",
                         git_link: "https://github.com/geon-woong/ACNH_BOOK",
-                        description : ["Public API 데이터를 이용한 모여봐요 동물의숲 생물 도감","Vue.js , Bootstrap","Heroku"],
+                        description : ["Public API 데이터를 이용한 모여봐요 동물의숲 생물 도감","Vue.js , Bootstrap","Firebase"],
                     },
                     {
                         img: require("/src/assets/woong_mall.png"),
@@ -62,7 +62,7 @@ const store = createStore({
 
                     },
                     {
-                        img: require("/src/assets/livenation.png"),
+                        img: require("/src/assets/ing.png"),
                         title: "리액트 게시판 ( 진행중 )",
                         link: "https://github.com/geon-woong/woong-community",
                         git_link: "https://github.com/geon-woong/woong-community",

@@ -45,7 +45,7 @@
 </div>  
         <div class="direction">
           
-        <router-link to="/work" class="next-page">Go Next</router-link>        
+        <router-link to="/work" class="next-page">Next</router-link>        
         </div>
 </template>
 
@@ -53,6 +53,10 @@
 import { mapState } from "vuex";
 
 export default {
+  data() {
+    return {
+    }
+  },
   computed:{
     ...mapState([
       "profile",

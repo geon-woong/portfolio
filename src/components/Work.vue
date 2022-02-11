@@ -88,9 +88,7 @@ setup() {
 html{
   font-family: 'Nanum Gothic';
 }
-h6{
-  font-size: 1.2rem;
-}
+
 li{
   line-height: 2rem;
 }
@@ -114,25 +112,24 @@ i{
   overflow: hidden;
   max-height: 500px;
   border-radius: 20px;
-  border:  1px solid var(--sub-color);
+  border:  2px solid var(--sub-color);
 }
 .swiper-slide div img{
 width: 100%;
+border-radius: 10px;
 }
 .col-md-8 div{
-  /* background: #fafafa; */
   border: 3px solid #fafafa;
   width: 100%; height: 28rem;
   padding: 7rem 5rem 5rem 9rem;
-  /* position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%); */
-    border-radius: 20px;
+  border-radius: 20px;
 
 }
 .col-md-8 div h6{
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--sub-color);
+  margin-bottom: 1rem;
 }
 
 
